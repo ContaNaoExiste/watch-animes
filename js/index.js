@@ -48,6 +48,7 @@ function getEpisodios(page) {
 				thumbnail:`https://i.redd.it/rhyscsjjwcla1.png`
 			},
 			episodio:{
+                episodio_id: 1,
 				thumbnail:`https://i.redd.it/rhyscsjjwcla1.png`
 			}
 		}
@@ -72,7 +73,7 @@ function getEpisodios(page) {
                     <div class="card-body">
                         <h5 class="card-title">${episodio.anime.nome_anime}</h5>
                         <h6 class="card-subtitle">Card subtitle</h6>
-                        <a href="#" class="card-link">Assistir</a>
+                        <a class="card-link" href="./episodio/episodio.html?episodio=${episodio.episodio.episodio_id || 0}">Assistir</a>
                     </div>
                 </div>
             </div>`
