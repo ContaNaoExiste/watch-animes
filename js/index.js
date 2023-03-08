@@ -1,9 +1,9 @@
 
-function getEpisodios() {
-    const episodios = [
+function getEpisodios(page) {
+    let episodios = [
         {	
 			anime: {
-				nome_anime:"Teste 1",
+				nome_anime:" Fumetsu no Anata e 2 – Episódios 16 & 17",
 				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
 			},
 			episodio:{
@@ -13,7 +13,7 @@ function getEpisodios() {
 
         {	
 			anime: {
-				nome_anime:"Teste 2",
+				nome_anime:"Archmage Transcending through Regression - Capítulo 187",
 				thumbnail:`https://i.redd.it/48988k82sqla1.png`
 			},
 			episodio:{
@@ -54,6 +54,11 @@ function getEpisodios() {
         
     ]
 
+    episodios = episodios.concat(episodios)
+    episodios = episodios.concat(episodios)
+    if (page) {
+        console.log("page", page);
+    }
     $("#grid-episodios").html("")
 
     for (let index = 0; index < episodios.length; index++) {
@@ -61,17 +66,13 @@ function getEpisodios() {
 
         $("#grid-episodios").append(
             `
-            <div class="col-3">
-            <div class="card">
+            <div class="col-4">
+            <div class="card text-bg-dark">
+                <img src="${episodio.episodio.thumbnail}" class="card-img" alt="..." height="300" >
                 <div class="card-body">
                     <h5 class="card-title">${episodio.anime.nome_anime}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <figure class="figure">
-                    <img src="${episodio.episodio.thumbnail}" class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption bold">A caption for the above image.</figcaption>
-                    </figure>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h6 class="card-subtitle">Card subtitle</h6>
+                    <a href="#" class="card-link">Assistir</a>
                 </div>
             </div>
             </div>`
@@ -79,6 +80,28 @@ function getEpisodios() {
         )
         console.log(episodio, " episodio")
     }
+
+    getPaginationEpisodios(page)
+}
+
+function getPaginationEpisodios(page) {
+    const pagination = {
+        itens: 10,
+        pages: 11
+    }
+    $(".pagination-episodios").html("")
+
+    $(".pagination-episodios").append(`<li class="page-item"><a class="page-link" onclick="getEpisodios(0)">Previous</a></li>`)
+
+    for (let index = 0; index < pagination.pages; index++) {
+        $(".pagination-episodios").append(`
+        <li class="page-item ${(index == page) ?  ' active': ""}" ${(page && index == page) ?  'aria-current="page"': ""}>
+            <a class="page-link" onclick="getEpisodios(${index});" >${index+1}</a>
+        </li>`)
+    }
+
+    $(".pagination-episodios").append(`<li class="page-item"><a class="page-link" onclick="getEpisodios(0)">Next</a></li>`)
+    
 }
 // A $( document ).ready() block.
 $( document ).ready(function() {

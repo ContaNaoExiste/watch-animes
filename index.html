@@ -17,9 +17,12 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Watch Animes</a>
+              <a class="navbar-brand" href="#">
+                <img src="https://i.redd.it/7plte3g83cla1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Watch Animes
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,18 +42,17 @@
               </div>
             </div>
         </nav>
-        <div class="container">
+        <div class="container" style="margin-top: 60px;">
             <div class="container text-center">
+                <div>
+                  <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center pagination-episodios"> </ul>
+                  </nav>
+                </div>
                 <div class="row" id="grid-episodios"> ... </div>
                 <div>
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                          <li class="page-item"><a class="page-link" href="./home/0">Previous</a></li>
-                          <li class="page-item"><a class="page-link" href="./home/1">1</a></li>
-                          <li class="page-item"><a class="page-link" href="./home/2">2</a></li>
-                          <li class="page-item"><a class="page-link" href="./home/3">3</a></li>
-                          <li class="page-item"><a class="page-link" href="./home/1">Next</a></li>
-                        </ul>
+                        <ul class="pagination justify-content-center pagination-episodios"> </ul>
                     </nav>
                 </div>
             </div>
