@@ -66,7 +66,7 @@ function getEpisodios(page) {
 
         $("#grid-episodios").append(
             `
-            <div class="col-4 d-flex align-items-stretch" style='padding-bottom: 20px;'>
+            <div class="col-xs-12 col-sm-4 d-flex align-items-stretch" style='padding-bottom: 20px;'>
                 <div class="card text-bg-dark">
                     <img src="${episodio.episodio.thumbnail}" class="card-img" alt="..." height="300" >
                     <div class="card-body">
