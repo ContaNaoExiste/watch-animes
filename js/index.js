@@ -3,10 +3,12 @@ function getEpisodios(page) {
     let episodios = [
         {	
 			anime: {
-				nome_anime:" Fumetsu no Anata e 2 – Episódios 16 & 17",
+				nome_anime:"Fumetsu no Anata e 2",
+                descricao: "",
 				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
 			},
 			episodio:{
+                nome_episodio: "Fumetsu no Anata e 2 – Episódios 16 & 17",
 				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
 			}
 		},
@@ -24,10 +26,12 @@ function getEpisodios(page) {
 
         {	
 			anime: {
-				nome_anime:"Teste 3",
+				nome_anime:"Vinland Saga Season 2",
+                descricao:`Um novo milênio começa na parte sul da península da Jutlândia, na Dinamarca. Thorfin foi comprado pelo proprietário de terras Ketil como um "escravo" e se engajou no trabalho de recuperação de terras em sua fazenda. Thorfinn conhece um jovem lá, Einar, que também era um escravo como ele. O encontro de Einar levou Thorfinn a enfrentar os pecados que havia cometido e começou a encontrar sentido na vida. Por outro lado, Canuto, que se tornou rei da Inglaterra, tentou estender seu território para o estabelecimento da "terra prometida". Esta é "A História de um Verdadeiro Guerreiro (Saga)". "A história da Expiação e Salvação (Saga)" que está além do prólogo. (Fonte: Site oficial, editado).`,
 				thumbnail:`https://i.redd.it/mueb2pcjgbma1.jpg`
 			},
 			episodio:{
+                nome_episodio: "Vinland Saga Season 2 Episódio 9",
 				thumbnail:`https://i.redd.it/mueb2pcjgbma1.jpg`
 			}
 		},
@@ -62,6 +66,7 @@ function getEpisodios(page) {
     }
     $("#grid-episodios").html("")
 
+    //const template = req
     for (let index = 0; index < episodios.length; index++) {
         const episodio = episodios[index]
 
