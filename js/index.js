@@ -66,15 +66,15 @@ function getEpisodios(page) {
 
         $("#grid-episodios").append(
             `
-            <div class="col-4">
-            <div class="card text-bg-dark">
-                <img src="${episodio.episodio.thumbnail}" class="card-img" alt="..." height="300" >
-                <div class="card-body">
-                    <h5 class="card-title">${episodio.anime.nome_anime}</h5>
-                    <h6 class="card-subtitle">Card subtitle</h6>
-                    <a href="#" class="card-link">Assistir</a>
+            <div class="col-4 d-flex align-items-stretch" style='padding-bottom: 20px;'>
+                <div class="card text-bg-dark">
+                    <img src="${episodio.episodio.thumbnail}" class="card-img" alt="..." height="300" >
+                    <div class="card-body">
+                        <h5 class="card-title">${episodio.anime.nome_anime}</h5>
+                        <h6 class="card-subtitle">Card subtitle</h6>
+                        <a href="#" class="card-link">Assistir</a>
+                    </div>
                 </div>
-            </div>
             </div>`
 
         )
