@@ -29,7 +29,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="..\index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Animes</a>
@@ -37,7 +37,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                 </form>
               </div>
             </div>
@@ -46,10 +46,10 @@
             <div class="container">
                 <div class="card text-bg-dark">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title" id="card-title-episodio">...</h5>
                         
                         <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="https://sweet.lime.stream/vod/daf670510f8016f123d7e1a55f526d30/f3655e83ef0df0142bd1814144594317.mp4" allowfullscreen width="100%" height="280px" scrolling="no" frameborder="0" allowscriptaccess></iframe>
+                            <iframe id="iframe-episodio" class="embed-responsive-item" src="https://i.redd.it/7plte3g83cla1.png" allowfullscreen scrolling="no" frameborder="0" allowscriptaccess ></iframe>
                         </div>
                         
                         <div>
@@ -63,9 +63,8 @@
             <div class="container">
                 <div class="card text-bg-dark">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title" id="card-title-anime">Card title</h5>
+                        <p class="card-text" id="card-title-descricao-anime">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
@@ -75,5 +74,5 @@
     </body>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="./js/index.js" type="text/javascript"></script>
+    <script src="./index.js" type="text/javascript"></script>
 </html>
