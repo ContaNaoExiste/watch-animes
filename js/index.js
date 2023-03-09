@@ -8,17 +8,20 @@ function getEpisodios(page) {
 				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
 			},
 			episodio:{
-                nome_episodio: "Fumetsu no Anata e 2 – Episódios 16 & 17",
+                nome_episodio: "Episódios 16 & 17",
+                url:"https://sweet.lime.stream/vod/c07385fbdd9b79e7caab6ccd6bed1861/83e4a1e57bebc3d0baded8e975dac869.mp4",
 				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
 			}
 		},
 
         {	
 			anime: {
-				nome_anime:"Archmage Transcending through Regression - Capítulo 187",
+				nome_anime:"Archmage Transcending through Regression",
 				thumbnail:`https://i.redd.it/48988k82sqla1.png`
 			},
 			episodio:{
+                nome_episodio: "Capítulo 187",
+                url:"https://sweet.lime.stream/vod/daf670510f8016f123d7e1a55f526d30/f3655e83ef0df0142bd1814144594317.mp4",
 				thumbnail:`https://i.redd.it/48988k82sqla1.png`
 			}
 		},
@@ -31,7 +34,7 @@ function getEpisodios(page) {
 				thumbnail:`https://i.redd.it/mueb2pcjgbma1.jpg`
 			},
 			episodio:{
-                nome_episodio: "Vinland Saga Season 2 Episódio 9",
+                nome_episodio: "Episódio 9",
 				thumbnail:`https://i.redd.it/mueb2pcjgbma1.jpg`
 			}
 		},
@@ -72,13 +75,17 @@ function getEpisodios(page) {
 
         $("#grid-episodios").append(
             `
-            <div class="col-xs-12 col-sm-4 d-flex align-items-stretch" style='padding-bottom: 20px;'>
-                <div class="card text-bg-dark">
-                    <img src="${episodio.episodio.thumbnail}" class="card-img" alt="..." height="300" >
+            <div class="col-xs-12 col-sm-2 d-flex align-items-stretch" style='padding-bottom: 20px;'>
+                <div class="card text-bg-dark card-espisodio">
+                    <img src="${episodio.episodio.thumbnail}" class="card-img img-episodio" alt="..." style="max-height: 250px; min-height: 150px;" >
                     <div class="card-body">
-                        <h5 class="card-title">${episodio.anime.nome_anime}</h5>
-                        <h6 class="card-subtitle">Card subtitle</h6>
-                        <a class="card-link" href="./episodio/episodio.html?episodio=${episodio.episodio.episodio_id || 0}">Assistir</a>
+                        <div class='text-start'>
+                            <p class="card-title">${episodio.anime.nome_anime}</p>
+                            <p class="card-title"><strong>${episodio.episodio.nome_episodio|| ''}</strong></p>
+                        </div>
+                        <div class="text-end " style='position: absolute; right: 10px; bottom: 10px; left: 0;'>
+                            <a class="card-link" href="./episodio/episodio.html?episodio=${episodio.episodio.episodio_id || 0}">Assistir</a>
+                        </div>
                     </div>
                 </div>
             </div>`
