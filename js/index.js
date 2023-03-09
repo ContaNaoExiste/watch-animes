@@ -77,7 +77,7 @@ function getEpisodios(page) {
             `
             <div class="col-xs-12 col-sm-2 d-flex align-items-stretch" style='padding-bottom: 20px;'>
                 <div class="card text-bg-dark card-espisodio">
-                    <img src="${episodio.episodio.thumbnail}" class="card-img img-episodio" alt="..." height="100" >
+                    <img src="${episodio.episodio.thumbnail}" class="card-img img-episodio" alt="..." style="max-height: 250px; min-height: 150px;" >
                     <div class="card-body">
                         <div class='text-start'>
                             <p class="card-title">${episodio.anime.nome_anime}</p>
