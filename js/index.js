@@ -84,7 +84,7 @@ function getEpisodios(page) {
                             <p class="card-title"><strong>${episodio.episodio.nome_episodio|| ''}</strong></p>
                         </div>
                         <div class="text-end " style='position: absolute; right: 10px; bottom: 10px; left: 0;'>
-                            <a class="card-link" href="./episodio/episodio.html?episodio=${episodio.episodio.episodio_id || 0}">Assistir</a>
+                            <a class="card-link" href="./episodio/episodio.html?episodio=${episodio.episodio.episodio_id || 0}"><i class="bi bi-play-btn-fill"></i></a>
                         </div>
                     </div>
                 </div>
