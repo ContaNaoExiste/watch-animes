@@ -1,10 +1,57 @@
 
 function preencherDadosEpisodio(params) {
-    $("#card-title-episodio").html("Vinland Saga Season 2 Episódio 9")
-    $("#card-title-anime").html("Vinland Saga Season 2")
-    $("#card-title-descricao-anime").html(`Um novo milênio começa na parte sul da península da Jutlândia, na Dinamarca. Thorfin foi comprado pelo proprietário de terras Ketil como um "escravo" e se engajou no trabalho de recuperação de terras em sua fazenda. Thorfinn conhece um jovem lá, Einar, que também era um escravo como ele. O encontro de Einar levou Thorfinn a enfrentar os pecados que havia cometido e começou a encontrar sentido na vida. Por outro lado, Canuto, que se tornou rei da Inglaterra, tentou estender seu território para o estabelecimento da "terra prometida". Esta é "A História de um Verdadeiro Guerreiro (Saga)". "A história da Expiação e Salvação (Saga)" que está além do prólogo. (Fonte: Site oficial, editado).`)
+    episodio = new URLSearchParams(window.location.search)
+    $("#card-title-episodio").html(episodio.get("nome_episodio"))
+    $("#card-title-anime").html(episodio.get("nome_episodio"))
+    $("#card-title-descricao-anime").html(episodio.get("nome_episodio"))
     //$("#iframe-episodio").attr("src", "response.html")
-    $("#iframe-episodio").attr("src", "https://sweet.lime.stream/vod/daf670510f8016f123d7e1a55f526d30/f3655e83ef0df0142bd1814144594317.mp4")
+    $("#iframe-episodio").attr("src", episodio.get("thumbnail"))
+    
+    
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "video/mp4");
+    myHeaders.append("Access-Control-Allow-Origin", "*");
+    myHeaders.append("Origin", "https://www.anitube.vip");
+    myHeaders.append("referer", episodio.get("page"));
+    
+    let request = new Request(episodio.get("url"), {
+        method: "GET",
+        headers: myHeaders,
+        mode: "cors",
+        cache: "default",
+    })
+    fetch(request)
+    .then((response) => response.blob())
+    .then((response) => {
+        const objectURL = URL.createObjectURL(response);
+        console.log( objectURL);
+        //myImage.src = objectURL;
+    });
+    /*$.get( episodio.get("url"),
+    {
+        headers: {
+            "referer": `https://www.anitube.vip/video/235456`
+        }
+    },
+     function( data ) {
+        $( "body" ).html( data );
+        alert( "Load was performed." );
+    });*/
+
+   /* const res = fetch(episodio.get("url"), {
+        method: 'GET',
+        headers: {
+        // Here you can set any headers you want
+        }
+    });
+    const blob = res.blob();
+    const urlObject = URL.createObjectURL(blob);*/
+    //$("#iframe-episodio").attr("src", episodio.get("url"))
+      
+    
+    
+    //$("#iframe-episodio").attr("src", "https://sweet.lime.stream/vod/daf670510f8016f123d7e1a55f526d30/f3655e83ef0df0142bd1814144594317.mp4")
+    //$("#iframe-episodio").attr("src", "https://akira.anicdn.net/appsd2/235456.mp4")
     
 }
 

@@ -1,73 +1,244 @@
 
 function getEpisodios(page) {
     let episodios = [
-        {	
-			anime: {
-				nome_anime:"Fumetsu no Anata e 2",
-                descricao: "",
-				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
-			},
-			episodio:{
-                nome_episodio: "Episódios 16 & 17",
-                url:"https://sweet.lime.stream/vod/c07385fbdd9b79e7caab6ccd6bed1861/83e4a1e57bebc3d0baded8e975dac869.mp4",
-				thumbnail:`https://i.redd.it/7ixgte68ioha1.jpg`
-			}
-		},
+        {
+          anime: {
+            nome_anime: 'Shin Shinka no Mi: Shiranai Uchi ni Kachigumi Jinsei ep 9',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235459/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Shin Shinka no Mi: Shiranai Uchi ni Kachigumi Jinsei ep 9',
+            url: 'https://akira.anicdn.net/appsd2/235459.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235459/1.jpg',
+            page: 'https://www.anitube.vip/video/235459'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Ars no Kyojuu ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235458/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Ars no Kyojuu ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235458.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235458/1.jpg',
+            page: 'https://www.anitube.vip/video/235458'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Isekai Nonbiri Nouka ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235456/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Isekai Nonbiri Nouka ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235456.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235456/1.jpg',
+            page: 'https://www.anitube.vip/video/235456'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Buddy Daddies ep 9',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235455/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Buddy Daddies ep 9',
+            url: 'https://akira.anicdn.net/appsd2/235455.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235455/1.jpg',
+            page: 'https://www.anitube.vip/video/235455'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Pokemon: Mezase Pokemon Master ep 9',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235453/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Pokemon: Mezase Pokemon Master ep 9',
+            url: 'https://akira.anicdn.net/appsd2/235453.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235453/1.jpg',
+            page: 'https://www.anitube.vip/video/235453'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'The Legend of Heroes: Sen no Kiseki - Northern War ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235450/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'The Legend of Heroes: Sen no Kiseki - Northern War ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235450.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235450/1.jpg',
+            page: 'https://www.anitube.vip/video/235450'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Nijiyon Animation ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235447/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Nijiyon Animation ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235447.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235447/1.jpg',
+            page: 'https://www.anitube.vip/video/235447'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Sugar Apple Fairy Tale ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235444/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Sugar Apple Fairy Tale ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235444.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235444/1.jpg',
+            page: 'https://www.anitube.vip/video/235444'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka IV: Fuka Shou - Yakusai-hen ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235441/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka IV: Fuka Shou - Yakusai-hen ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235441.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235441/1.jpg',
+            page: 'https://www.anitube.vip/video/235441'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Cap Kakumei Bottleman DX ep 47',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235438/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Cap Kakumei Bottleman DX ep 47',
+            url: 'https://akira.anicdn.net/appsd2/235438.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235438/1.jpg',
+            page: 'https://www.anitube.vip/video/235438'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Spy Kyoushitsu ep 9',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235435/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Spy Kyoushitsu ep 9',
+            url: 'https://akira.anicdn.net/appsd2/235435.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235435/1.jpg',
+            page: 'https://www.anitube.vip/video/235435'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Inu ni Nattara Suki na Hito ni Hirowareta. ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235434/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Inu ni Nattara Suki na Hito ni Hirowareta. ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235434.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235434/1.jpg',
+            page: 'https://www.anitube.vip/video/235434'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Hyouken no Majutsushi ga Sekai wo Suberu ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235432/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Hyouken no Majutsushi ga Sekai wo Suberu ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235432.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235432/1.jpg',
+            page: 'https://www.anitube.vip/video/235432'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Oniichan wa Oshimai! ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235431/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Oniichan wa Oshimai! ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235431.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235431/1.jpg',
+            page: 'https://www.anitube.vip/video/235431'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Revenger ep 10',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235428/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Revenger ep 10',
+            url: 'https://akira.anicdn.net/appsd2/235428.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235428/1.jpg',
+            page: 'https://www.anitube.vip/video/235428'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Yu-Gi-Oh!: Go Rush!! ep 48',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235425/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Yu-Gi-Oh!: Go Rush!! ep 48',
+            url: 'https://akira.anicdn.net/appsd2/235425.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235425/1.jpg',
+            page: 'https://www.anitube.vip/video/235425'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Bungou Stray Dogs 4 - Dublado ep 6',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235305/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Bungou Stray Dogs 4 - Dublado ep 6',
+            url: 'https://akira.anicdn.net/appsd2/235305.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235305/1.jpg',
+            page: 'https://www.anitube.vip/video/235305'
+          }
+        },
+        {
+          anime: {
+            nome_anime: 'Ooyukiumi no Kaina ep 9',
+            descricao: '',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235302/1.jpg'
+          },
+          episodio: {
+            nome_episodio: 'Ooyukiumi no Kaina ep 9',
+            url: 'https://akira.anicdn.net/appsd2/235302.mp4',
+            thumbnail: 'https://www.anitube.vip/media/videos/tmb/235302/1.jpg',
+            page: 'https://www.anitube.vip/video/235302'
+          }
+        }
+      ]
 
-        {	
-			anime: {
-				nome_anime:"Archmage Transcending through Regression",
-				thumbnail:`https://i.redd.it/48988k82sqla1.png`
-			},
-			episodio:{
-                nome_episodio: "Capítulo 187",
-                url:"https://sweet.lime.stream/vod/daf670510f8016f123d7e1a55f526d30/f3655e83ef0df0142bd1814144594317.mp4",
-				thumbnail:`https://i.redd.it/48988k82sqla1.png`
-			}
-		},
-
-
-        {	
-			anime: {
-				nome_anime:"Vinland Saga Season 2",
-                descricao:`Um novo milênio começa na parte sul da península da Jutlândia, na Dinamarca. Thorfin foi comprado pelo proprietário de terras Ketil como um "escravo" e se engajou no trabalho de recuperação de terras em sua fazenda. Thorfinn conhece um jovem lá, Einar, que também era um escravo como ele. O encontro de Einar levou Thorfinn a enfrentar os pecados que havia cometido e começou a encontrar sentido na vida. Por outro lado, Canuto, que se tornou rei da Inglaterra, tentou estender seu território para o estabelecimento da "terra prometida". Esta é "A História de um Verdadeiro Guerreiro (Saga)". "A história da Expiação e Salvação (Saga)" que está além do prólogo. (Fonte: Site oficial, editado).`,
-				thumbnail:`https://i.redd.it/mueb2pcjgbma1.jpg`
-			},
-			episodio:{
-                nome_episodio: "Episódio 9",
-				thumbnail:`https://i.redd.it/mueb2pcjgbma1.jpg`
-			}
-		},
-
-        {	
-			anime: {
-				nome_anime:"Teste 4",
-				thumbnail:`https://i.redd.it/7plte3g83cla1.png`
-			},
-			episodio:{
-				thumbnail:`https://i.redd.it/7plte3g83cla1.png`
-			}
-		},
-        
-        {	
-			anime: {
-				nome_anime:"Teste 5",
-				thumbnail:`https://i.redd.it/rhyscsjjwcla1.png`
-			},
-			episodio:{
-                episodio_id: 1,
-				thumbnail:`https://i.redd.it/rhyscsjjwcla1.png`
-			}
-		}
-        
-    ]
-
-    episodios = episodios.concat(episodios)
-    episodios = episodios.concat(episodios)
-    if (page) {
-        console.log("page", page);
-    }
     $("#grid-episodios").html("")
+
 
     //const template = req
     for (let index = 0; index < episodios.length; index++) {
@@ -84,7 +255,7 @@ function getEpisodios(page) {
                             <p class="card-title"><strong>${episodio.episodio.nome_episodio|| ''}</strong></p>
                         </div>
                         <div class="text-end " style='position: absolute; right: 10px; bottom: 10px; left: 0;'>
-                            <a class="card-link" href="./episodio/episodio.html?episodio=${episodio.episodio.episodio_id || 0}"><i class="bi bi-play-btn-fill"></i></a>
+                            <a class="card-link" href="./episodio/episodio.html?${new URLSearchParams(episodio.episodio).toString() || ''}"><i class="bi bi-play-btn-fill"></i></a>
                         </div>
                     </div>
                 </div>
