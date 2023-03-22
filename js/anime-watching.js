@@ -5,7 +5,7 @@ function getAnimeById(){
         .then(data=>{
             if( data){
                 $("#anime-video").html(`
-                    <iframe id="player" src="${data.warezcdn.href}" playsinline controls data-poster="${data.imdb.image}" width="100%" height="650px" ></iframe>
+                    <iframe id="player" src="${data.warezcdn.href}" playsinline controls data-poster="${data.imdb.image}" width="100%" height="650px" allowfullscreen></iframe>
                 `)
                 $("#anime-title").html(data.imdb.title)
             }
