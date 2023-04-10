@@ -29,6 +29,8 @@
             var containerEl = document.querySelector('.filter__gallery');
             var mixer = mixitup(containerEl);
         }
+
+        includeHTML();
     });
 
     /*------------------
@@ -98,4 +100,15 @@
         return false;
      });
 
+     function includeHTML() {
+        let includes = $(document).find("[data-w3-include-html]*")
+        console.log(includes, " includes")
+        for (let i = 0; i < includes.length; i++) {
+            let element = $(includes[i])
+            let file = element.data("w3-include-html")
+            if(file){
+                element.load( file)
+            }
+        };
+      };
 })(jQuery);
