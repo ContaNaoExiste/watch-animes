@@ -453,6 +453,9 @@ ol {
 .hero__text {
 	position: relative;
 	z-index: 9;
+    background-color: rgb(0, 0, 0, 0.4);
+	border-radius: 10px;
+    padding: 10px;
 }
 
 .hero__text .label {
@@ -467,6 +470,7 @@ ol {
 	-webkit-transition: all, 0.2s;
 	-o-transition: all, 0.2s;
 	transition: all, 0.2s;
+    border-radius: 5px;
 }
 
 .hero__text h2 {

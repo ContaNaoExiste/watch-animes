@@ -13,7 +13,23 @@ function getListAnimesSlide(){
                 var bg = $(this).data('setbg');
                 $(this).css('background-image', 'url(' + bg + ')');
             });
-        }
+
+            var hero_s = $(".hero__slider");
+            hero_s.owlCarousel({
+                loop: true,
+                margin: 0,
+                items: 1,
+                dots: true,
+                nav: true,
+                navText: ["<span class='arrow_carrot-left'></span>", "<span class='arrow_carrot-right'></span>"],
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                smartSpeed: 1200,
+                autoHeight: false,
+                autoplay: true,
+                mouseDrag: false
+            });
+        }    
     })
 }
 function getHtmlSlideAnime(element){
@@ -23,9 +39,10 @@ function getHtmlSlideAnime(element){
         <div class="row">
             <div class="col-lg-6">
                 <div class="hero__text">
-                    <div class="label">Adventure</div>
+                    ${ element.imdb.genre.split(",").map((genre)=>{ return ` <div class="label">${genre}</div>`})}
+                   
                     <h2>${element.imdb.title}</h2>
-                    <p>After 30 days of travel across the world...</p>
+                    <p>${element.imdb.plot || ''}</p>
                     <a href="anime-watching.html?id=${element.imdb.id}"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
