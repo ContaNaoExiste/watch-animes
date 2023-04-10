@@ -102,11 +102,11 @@
 
      function includeHTML() {
         let includes = $(document).find("[data-w3-include-html]*")
-        console.log(includes, " includes")
         for (let i = 0; i < includes.length; i++) {
             let element = $(includes[i])
             let file = element.data("w3-include-html")
             if(file){
+                console.log(file, " file");
                 element.load( file)
             }
         };
