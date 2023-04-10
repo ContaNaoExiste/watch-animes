@@ -1,12 +1,12 @@
-function getAnimesPopular(){
+function getListAnimesSlide(){
     
-    $("#episodios-popular-shows").html("")
+    $("#slide-shows").html("")
 
-    fetch("https://watch-animes-api.vercel.app/index/popular").then(e => e.json())
+    fetch("https://watch-animes-api.vercel.app/slide").then(e => e.json())
     .then(data=>{
         if( data && data.animes){
             data.animes.forEach(element => {
-                $("#episodios-popular-shows").append( getHtmlAnime(element))
+                $("#slide-shows").append( getHtmlSlideAnime(element))
             });
 
             $('.set-bg').each(function () {
@@ -16,24 +16,22 @@ function getAnimesPopular(){
         }
     })
 }
+function getHtmlSlideAnime(element){
 
-function getAnimesTrending(){
-    
-    $("#episodios-trending-now").html("")
-
-    fetch("https://watch-animes-api.vercel.app/index/trending").then(e => e.json())
-    .then(data=>{
-        if( data && data.animes){
-            data.animes.forEach(element => {
-                $("#episodios-trending-now").append( getHtmlAnime(element))
-            });
-
-            $('.set-bg').each(function () {
-                var bg = $(this).data('setbg');
-                $(this).css('background-image', 'url(' + bg + ')');
-            });
-        }
-    })
+    return `
+    <div class="hero__items set-bg" data-setbg="${element.imdb.image || './img/not_found.png'}">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="hero__text">
+                    <div class="label">Adventure</div>
+                    <h2>${element.imdb.title}</h2>
+                    <p>After 30 days of travel across the world...</p>
+                    <a href="anime-watching.html?id=${element.imdb.id}"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
 }
 
 function getHtmlAnime(element){
@@ -53,6 +51,8 @@ function getHtmlAnime(element){
     `
 }
 $( document ).ready(function() {
-    getAnimesPopular()
-    getAnimesTrending()
+    //getAnimesPopular()
+    //getAnimesTrending()
+
+    getListAnimesSlide()
 });
