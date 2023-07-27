@@ -1,6 +1,6 @@
 require('dotenv/config')
 const server = require("./server")
 
-server.init()
+const app = server.init()
 
 module.exports = app
