@@ -6,15 +6,19 @@
         "use": "@now/node"
       }
     ],
-    "routes": [
+    "rewrites": [
       
         {
-            "src": "/anime",
-            "dest": "/routes/anime.js"
+            "src": "/anime/(.*)",
+            "dest": "/anime"
           },
           {
-            "src": "/anime-details",
-            "dest": "/routes/anime-details.js"
+            "src": "/anime-details/(.*)",
+            "dest": "/anime-details"
+          },
+          {
+            "src": "/index",
+            "dest": "/index"
           }
 
     ]
