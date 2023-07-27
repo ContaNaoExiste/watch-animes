@@ -9,11 +9,11 @@
     "routes": [
       
         {
-            "src": "/anime/(.*)",
+            "src": "/anime",
             "dest": "/routes/anime.js"
           },
           {
-            "src": "/anime-details/(.*)",
+            "src": "/anime-details",
             "dest": "/routes/anime-details.js"
           }, 
           {
