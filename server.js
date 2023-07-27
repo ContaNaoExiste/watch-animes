@@ -11,7 +11,7 @@ const app = express()
 
 function init() {
 
-    app.set('views', './views')
+    app.set('views', path.resolve('./views'))
     app.engine('html', squirrelly.__express)
     
     app.use(helmet({
@@ -38,16 +38,16 @@ function init() {
     app.use(hpp())
 
     if (process.env.ENVIRONMENT == "DES") {
-        app.use("/", express.static("./assets"))
+        app.use("/", express.static(path.resolve("./assets")))
     }
   
-    initRoutes(app, "./routes") // views
+    initRoutes(app, path.resolve("./routes")) // views
     // initRoutes(app, "./api", "/api/") // api
 
     app.get('*', (req, res) => {
         res.redirect("/index");
     })
-    
+
     app.listen(process.env.SERVER_PORT, () => {
         console.log(`Server UP on port ${process.env.SERVER_PORT}`)
     })
