@@ -5,5 +5,21 @@
         "src": "index.js",
         "use": "@now/node"
       }
+    ],
+    "routes": [
+      
+        {
+            "src": "/episodios/(.*)",
+            "dest": "/episodios/index.js"
+          },
+          {
+            "src": "/api/(.*)",
+            "dest": "/api/index.js"
+          }, 
+          {
+            "src": "/(.*)",
+            "dest": "index.js"
+          }
+
     ]
 }
