@@ -7,9 +7,9 @@ const hpp = require('hpp')
 const squirrelly = require("squirrelly")
 const cookieSession = require('cookie-session')
 const cookieParser = require("cookie-parser");
+const app = express()
 
 function init() {
-    const app = express()
 
     app.set('views', './views')
     app.engine('html', squirrelly.__express)
@@ -71,7 +71,7 @@ function initRoutes(app, dirPath, urlPath = "/") {
             if(routePath == "/login"){
                 app.use(routePath, route.router)
             }else{
-                app.use(routePath, requireAuthentication, route.router)
+                app.use(routePath, route.router)
             }
         })
     } catch (error) { console.error(error) }
