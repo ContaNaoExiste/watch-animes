@@ -44,12 +44,12 @@ function init() {
     initRoutes(app, "./routes") // views
     // initRoutes(app, "./api", "/api/") // api
 
+    app.get('*', (req, res) => {
+        res.redirect("/index");
+    })
+    
     app.listen(process.env.SERVER_PORT, () => {
         console.log(`Server UP on port ${process.env.SERVER_PORT}`)
-    })
-
-    app.get('*', (req, res) => {
-        res.redirect("/index")
     })
 
     return app
