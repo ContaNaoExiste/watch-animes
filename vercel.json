@@ -9,16 +9,16 @@
     "routes": [
       
         {
-            "src": "/episodios/(.*)",
-            "dest": "/episodios/index.js"
+            "src": "/anime/(.*)",
+            "dest": "/routes/anime.js"
           },
           {
-            "src": "/api/(.*)",
-            "dest": "/api/index.js"
+            "src": "/anime-details/(.*)",
+            "dest": "/routes/anime-details.js"
           }, 
           {
             "src": "/(.*)",
-            "dest": "index.js"
+            "dest": "/routes/index.js"
           }
 
     ]
