@@ -5,13 +5,5 @@
         "src": "index.js",
         "use": "@now/node"
       }
-    ],
-    "routes": [
-      
-        {
-            "src": "anime",
-            "dest": "/anime"
-        }
-
     ]
 }

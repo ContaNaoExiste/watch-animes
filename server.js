@@ -44,9 +44,15 @@ function init() {
     initRoutes(app, "./routes") // views
     // initRoutes(app, "./api", "/api/") // api
 
-    app.listen(process.env.SERVER_PORT, () => {
+    /*app.listen(process.env.SERVER_PORT, () => {
         console.log(`Server UP on port ${process.env.SERVER_PORT}`)
+    })*/
+
+    app.get('*', (req, res) => {
+        res.status(404).send({message: 'Endpoint não configurado!', error: 404})
     })
+
+    return app
 }
 
 function initRoutes(app, dirPath, urlPath = "/") {
