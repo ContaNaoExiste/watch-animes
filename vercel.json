@@ -15,10 +15,6 @@
           {
             "src": "/anime-details",
             "dest": "/routes/anime-details.js"
-          }, 
-          {
-            "src": "/(.*)",
-            "dest": "/routes/index.js"
           }
 
     ]
