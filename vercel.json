@@ -19,11 +19,6 @@
           {
             "src": "/index",
             "dest": "/index"
-          },
-          {
-            "src": "/(*)",
-            "dest": "/index"
           }
-
     ]
 }
