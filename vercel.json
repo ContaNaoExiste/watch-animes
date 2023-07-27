@@ -2,11 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "index.js",
+        "src": "/routes/index.js",
         "use": "@now/node"
       },
       {
-        "src": "/routes/(*).js",
+        "src": "/routes/anime-details.js",
+        "use": "@now/node"
+      },
+      {
+        "src": "/routes/anime.js",
         "use": "@now/node"
       }
     ]
