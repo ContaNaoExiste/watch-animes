@@ -9,15 +9,19 @@
     "rewrites": [
       
         {
-            "src": "/anime/(.*)",
+            "src": "/anime/",
             "dest": "/anime"
           },
           {
-            "src": "/anime-details/(.*)",
+            "src": "/anime-details/",
             "dest": "/anime-details"
           },
           {
             "src": "/index",
+            "dest": "/index"
+          },
+          {
+            "src": "/(*)",
             "dest": "/index"
           }
 
