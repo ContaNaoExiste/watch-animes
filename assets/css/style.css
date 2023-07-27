@@ -453,6 +453,9 @@ ol {
 .hero__text {
 	position: relative;
 	z-index: 9;
+    background-color: rgb(0, 0, 0, 0.4);
+	border-radius: 10px;
+    padding: 10px;
 }
 
 .hero__text .label {
@@ -467,6 +470,7 @@ ol {
 	-webkit-transition: all, 0.2s;
 	-o-transition: all, 0.2s;
 	transition: all, 0.2s;
+    border-radius: 5px;
 }
 
 .hero__text h2 {
@@ -651,6 +655,9 @@ ol {
 	margin-bottom: 30px;
 }
 
+#recent-shows .product__item__pic{
+    height: 200px;
+}
 .product__item__pic {
 	height: 325px;
 	position: relative;
@@ -2005,7 +2012,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 80%;
 	}
 }
 

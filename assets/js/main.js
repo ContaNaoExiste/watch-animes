@@ -29,6 +29,8 @@
             var containerEl = document.querySelector('.filter__gallery');
             var mixer = mixitup(containerEl);
         }
+
+        includeHTML();
     });
 
     /*------------------
@@ -61,21 +63,6 @@
     /*------------------
 		Hero Slider
 	--------------------*/
-    var hero_s = $(".hero__slider");
-    hero_s.owlCarousel({
-        loop: true,
-        margin: 0,
-        items: 1,
-        dots: true,
-        nav: true,
-        navText: ["<span class='arrow_carrot-left'></span>", "<span class='arrow_carrot-right'></span>"],
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-        mouseDrag: false
-    });
 
     /*------------------
         Video Player
@@ -98,4 +85,15 @@
         return false;
      });
 
+     function includeHTML() {
+        let includes = $(document).find("[data-w3-include-html]*")
+        for (let i = 0; i < includes.length; i++) {
+            let element = $(includes[i])
+            let file = element.data("w3-include-html")
+            if(file){
+                console.log(file, " file");
+                element.load( file)
+            }
+        };
+      };
 })(jQuery);
